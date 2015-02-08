@@ -126,8 +126,28 @@ iex> q = <<0x5b>>
 
 				<section>
 					<pre><code class="elixir">
-&lt;&lt;m :: size(2), n :: size(6)&gt;&gt; = q
+iex> &lt;&lt;m :: size(2), n :: size(6)&gt;&gt; = q
 "["
+
+iex> m
+1
+
+iex> n
+27
+					</code></pre>
+				</section>
+
+				<section>
+					<pre><code class="elixir">
+iex> &lt;&lt;m :: bits-size(2), n :: bits-size(6)&gt;&gt; = q
+"["
+
+iex> m
+<<1::size(2)>>
+
+iex> n
+<<27::size(6)>>
+
 					</code></pre>
 				</section>
 
